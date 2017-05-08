@@ -74,6 +74,7 @@ RUN DEBIAN_FRONTEND=noninteractive dpkg --add-architecture i386 && \
   ./sys/install.sh && \
   make install && \
   apt-get install -y xz-utils && \ # Needed for r2pm.
+  apt-get install -y vim-tiny && \ # Needed for r2frida.
   apt-get remove --purge -y \
   bison \
   python-pip \
