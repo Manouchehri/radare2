@@ -73,12 +73,9 @@ RUN DEBIAN_FRONTEND=noninteractive dpkg --add-architecture i386 && \
   cd radare2 && \
   ./sys/install.sh && \
   make install && \
+  apt-get install -y xz-utils && \
   apt-get remove --purge -y \
-  curl \
-  gcc \
   bison \
-  pkg-config \
-  make \
   python-pip \
   glib-2.0 && \
   apt-get autoremove --purge -y && \
